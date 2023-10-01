@@ -1,4 +1,4 @@
-![Prodigy InfoTech Header](images/header.png)
+![Prodigy InfoTech Header](/profile/images/header.png)
 
 # Prodigy InfoTech
 
