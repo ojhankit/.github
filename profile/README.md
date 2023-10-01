@@ -1,5 +1,6 @@
-# Prodigy InfoTech
+![Prodigy InfoTech Header](images/header.png)
 
+# Prodigy InfoTech
 
 Welcome to the Prodigy InfoTech GitHub repository! Here you'll find a collection of our open-source projects, resources, and contributions to the tech community.
 
