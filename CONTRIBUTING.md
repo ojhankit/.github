@@ -21,7 +21,7 @@ Before you start, please review our [Code of Conduct](CODE_OF_CONDUCT.md). We ex
    git checkout -b feature/your-feature-name
    ```
 
-4. **Make Changes**: Make your changes or additions to the code, documentation, or any other project aspect.
+4. **Make Changes**: Make your changes or additions to the code, documentation, or any other project aspect. If you are submitting your Project, create a new folder with the name of the project and the contents inside it. The Project should include a README.md file outlining your project and a link to your GitHub Account at the end. 
 
 5. **Test**: If applicable, test your changes thoroughly to ensure they work as intended.
 
@@ -46,11 +46,7 @@ Before you start, please review our [Code of Conduct](CODE_OF_CONDUCT.md). We ex
 
 ## Reporting Issues
 
-If you find a bug, have a suggestion, or want to discuss something related to the project, please check the [Issues](Link to Issues) section. If your issue or idea is not listed, feel free to open a new one.
-
-## Code Style and Guidelines
-
-Each project may have specific coding guidelines or conventions. Please review the project's documentation or README for information on coding style and contribution guidelines.
+If you find a bug, have a suggestion, or want to discuss something related to the project, please check the Issues section. If your issue or idea is not listed, feel free to open a new one.
 
 ## Thank You
 
