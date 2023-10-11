@@ -5,8 +5,10 @@ Please include a summary of the changes and the related issue. Please also inclu
 ## Issue
 <!---
 Please create a New Issue if it doesn't exist.
+Should be in format:
+Fixes: #x where x is the issue number
 -->
-Fixes # (issue)
+Fixes # (issue number)
 
 ## Type of change
 - [ ] Bug fix
