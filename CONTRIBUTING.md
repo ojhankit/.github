@@ -1,57 +1,136 @@
-# Contributing to Prodigy InfoTech Projects
+# Contributing to SANCHARI
 
-Welcome to Prodigy InfoTech's open-source projects! We're excited that you're interested in contributing to our community. By participating, you not only enhance your skills but also help improve our projects for everyone. Here's how you can get started:
+Thank you for contributing to SANCHARI.
 
-## Code of Conduct
+Please follow the branch and development workflow below.
 
-Before you start, please review our [Code of Conduct](CODE_OF_CONDUCT.md). We expect all contributors to adhere to these guidelines to ensure a positive and inclusive environment.
+## 1. Branch Structure
 
-## How to Contribute
+We use the following branch structure:
 
-1. **Fork the Repository**: Start by forking the repository you wish to Contribute to by forking it your GitHub account using the "Fork" button.
+```text
+main
+  │
+  └── develop
+        │
+        ├── feature/input
+        ├── feature/network
+        ├── feature/routing
+        ├── feature/scheduling
+        ├── feature/validation
+        ├── feature/simulation
+        └── feature/gui
+```
 
-2. **Clone the Repository**: Clone the forked repository to your local machine:
-   ```
-   git clone https://github.com/your-username/repo-name.git
-   cd repo-name
-   ```
+* `main` — stable, release-ready code
+* `develop` — integration branch for ongoing development
+* `feature/*` — individual feature or module development
 
-3. **Create a Branch**: Create a new branch for your contribution:
-   ```
-   git checkout -b feature/your-feature-name
-   ```
+## 2. Creating a Feature Branch
 
-4. **Make Changes**: Make your changes or additions to the code, documentation, or any other project aspect. If you are submitting your Project, create a new folder with the name of the project and the contents inside it. The Project should include a README.md file outlining your project and a link to your GitHub Account at the end. 
+Always create your feature branch from the latest `develop`.
 
-5. **Test**: If applicable, test your changes thoroughly to ensure they work as intended.
+```cmd
+git switch develop
+git pull origin develop
+git switch -c feature/<feature-name>
+```
 
-6. **Commit**: Commit your changes with a descriptive commit message:
-   ```
-   git commit -m "Add your descriptive message here"
-   ```
+Example:
 
-7. **Push Changes**: Push your changes to your forked repository:
-   ```
-   git push origin feature/your-feature-name
-   ```
+```cmd
+git switch develop
+git pull origin develop
+git switch -c feature/routing
+```
 
-8. **Pull Request**: Open a Pull Request (PR) on the original repository:
-   - Describe your changes and explain why they are valuable.
-   - Reference any related issues or discussions.
-   - Follow the template provided in the PR description, if available.
+Do not develop directly on `main` or `develop`.
 
-9. **Review**: Participate in the code review process. Address any feedback or comments provided by maintainers.
+## 3. Keep Your Branch Updated
 
-10. **Merge**: Once your PR is approved, it will be merged into the main project. Congratulations, your contribution is now part of Prodigy InfoTech!
+If `develop` changes while you are working, update your feature branch before creating a Pull Request.
 
-## Reporting Issues
+```cmd
+git switch develop
+git pull origin develop
 
-If you find a bug, have a suggestion, or want to discuss something related to the project, please check the Issues section. If your issue or idea is not listed, feel free to open a new one.
+git switch feature/<feature-name>
+git merge develop
+```
 
-## Thank You
+Resolve any conflicts, run the tests, and then push your branch.
 
-Thank you for contributing to Prodigy InfoTech! Your efforts are greatly appreciated. Your contributions help make our projects better and empower our community.
+## 4. Commits
 
-If you have any questions or need further assistance, please reach out to us at [contact@prodigyinfotech.dev](mailto:contact@prodigyinfotech.dev).
+Use clear and descriptive commit messages.
 
-Happy coding!
+Examples:
+
+```text
+feat: add path generation
+fix: handle disconnected network
+test: add routing validation tests
+refactor: simplify network graph
+docs: update setup instructions
+```
+
+## 5. Pull Requests
+
+When your feature is complete:
+
+```cmd
+git push -u origin feature/<feature-name>
+```
+
+Create a Pull Request:
+
+```text
+feature/<feature-name> → develop
+```
+
+Before creating the PR:
+
+* Make sure your branch is up to date with `develop`
+* Run all relevant tests
+* Make sure the application still works
+* Keep the PR focused on one feature or change
+
+After review and approval, the branch can be merged into `develop`.
+
+## 6. Releases
+
+Only stable code should be merged from:
+
+```text
+develop → main
+```
+
+The `main` branch should always remain in a usable state.
+
+---
+
+## Quick Workflow
+
+For every new feature:
+
+```cmd
+git switch develop
+git pull origin develop
+
+git switch -c feature/<feature-name>
+
+# do your work
+
+git add .
+git commit -m "feat: <description>"
+
+git push -u origin feature/<feature-name>
+```
+
+Then open a Pull Request from:
+
+```text
+feature/<feature-name> → develop
+```
+
+For more details about project setup, see [README.md](README.md).
